@@ -1,36 +1,19 @@
 # Kanishk Thakar — Personal Portfolio
 
-A custom-coded personal portfolio for Kanishk Thakar, BTech student at NMIMS MPSTME, roll J080.
+A responsive portfolio exploring technology, business and human wellbeing.
 
-## Run locally
+## Run
 
-No dependency installation or build step is required.
+Serve `dist/` with any static HTTP server. No build or package installation is required.
 
-```sh
-python3 -m http.server 4173
-```
+## Experience
 
-Open http://localhost:4173. The site is plain HTML, CSS and JavaScript.
+An original WebGL sculpture, animated entry, scroll-driven projects, interactive capabilities, layered perspective cards, accessible native dialogs, opt-in ambient sound and motion controls. Respects reduced-motion preferences; static CSS gradients provide a graphics fallback.
 
-## Content and design
+## Design reference and credits
 
-The portfolio includes About, three selected projects, Skills & Interests, education and certifications, and contact through LinkedIn. The visual concept connects technology, business and wellbeing around a human-first centre. Project illustrations are original CSS and canvas artwork, not screenshots or claims of product performance.
-
-Project dialogs support keyboard interaction and Escape. Motion respects the operating system's reduced-motion preference; the hero orbit also has a pause control. The layout adapts to phone and laptop widths.
-
-## Credits and sources
-
-- Fonts: Syne and DM Sans, served through Google Fonts (SIL Open Font License).
-- Public professional information: https://www.linkedin.com/in/kanishkthakar
-- Founder role: https://www.soulyatri.com/kanishk-thakar
-- Voice project: https://github.com/KanishkThakar/soul-yatri-ai
-- Package scanning project: https://github.com/KanishkThakar/metrology-scanner
-- AI coding assistance: OpenAI Codex. The portfolio was custom implemented rather than adapted from a downloaded template.
-
-No private account credentials, home address or phone number are included. Technologies describe project work and learning interests, not proficiency rankings.
+Layout, palette and motion direction inspired by [Amaterasu](https://amaterasu.ai/) (reference design by Exo Ape). Reimplemented with original code, procedural graphics and Kanishk's portfolio content. No reference portrait, proprietary font or application source is included. Typography: Manrope via Google Fonts. REA was used to inspect the reference and verify browser interactions.
 
 ## Hosting
 
-ChatGPT Sites: https://kanishk-thakar-j080.dhruv-paleja.chatgpt.site
-
-The assignment names GitHub Pages, Vercel or Netlify and requires access without login. ChatGPT Sites hosting preference and public-access approval must be reconciled before claiming full submission readiness.
+Published through ChatGPT Sites. Audience settings are managed separately from this source repository.
