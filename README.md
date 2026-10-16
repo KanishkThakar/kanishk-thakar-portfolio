@@ -1,19 +1,21 @@
 # Kanishk Thakar — Personal Portfolio
 
-A responsive portfolio exploring technology, business and human wellbeing.
+A responsive personal portfolio for Kanishk Thakar, BTech J080, covering technology, business and human wellbeing.
 
-## Run
+## Run locally
 
-Serve `dist/` with any static HTTP server. No build or package installation is required.
+Serve this repository directory with any static HTTP server, for example `python3 -m http.server 4175`. No build or package installation is required.
 
 ## Experience
 
-An original WebGL sculpture, animated entry, scroll-driven projects, interactive capabilities, layered perspective cards, accessible native dialogs, opt-in ambient sound and motion controls. Respects reduced-motion preferences; static CSS gradients provide a graphics fallback.
+Portrait-led introduction, animated entry, circular scroll reveal, five morphing diagram scenes, three interactive technology triangles, six guiding principles, floating personal perspectives, learning details and a contact footer. Includes native modal drawers, keyboard navigation, opt-in ambient audio, animation controls and reduced-motion support. Desktop wheel input uses damped scrolling; touch retains native scrolling.
 
-## Design reference and credits
+## Visual reference and asset provenance
 
-Layout, palette and motion direction inspired by [Amaterasu](https://amaterasu.ai/) (reference design by Exo Ape). Reimplemented with original code, procedural graphics and Kanishk's portfolio content. No reference portrait, proprietary font or application source is included. Typography: Manrope via Google Fonts. REA was used to inspect the reference and verify browser interactions.
+The requested visual reconstruction follows [Amaterasu](https://amaterasu.ai/), designed by Exo Ape. Layout and interaction code are independently implemented for this portfolio. The decorative portrait texture and TWK Lausanne / Neo Sans Pro font files are sourced from the reference website; they are not represented as original portfolio assets. The portrait is decorative and does not depict Kanishk. See `assets/provenance.json` for source and asset hashes. Public availability does not establish a redistribution license; no asset license is asserted by this repository.
+
+Personal content links to Kanishk's LinkedIn, GitHub projects and Soul Yatri profile. Perspective text is personal portfolio prose, not third-party testimonials.
 
 ## Hosting
 
-Published through ChatGPT Sites. Audience settings are managed separately from this source repository.
+Deployed through ChatGPT Sites. Audience settings are managed separately from this source repository. The native Sites deployment preserves the existing audience.

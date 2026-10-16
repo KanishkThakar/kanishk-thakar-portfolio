@@ -1,0 +1,30 @@
+{
+  "source": "https://amaterasu.ai/",
+  "assets": [
+    {
+      "file": "NeoSansPro-Medium.woff2",
+      "bytes": 41848,
+      "sha256": "a85e9107f1f910c0cdb4af9050ffff02f5ca7cde5e7a16e964b0e6c0e4d55371"
+    },
+    {
+      "file": "TWKLausanne-200.woff2",
+      "bytes": 33220,
+      "sha256": "e7c302b00f7b539a05a52db95eed6fc054f291dcdf7bf1ec4ee7bbb90db005fa"
+    },
+    {
+      "file": "TWKLausanne-250.woff2",
+      "bytes": 33040,
+      "sha256": "f135b57fc3a5b9cc0c72e862d47f9ad0fbbd50d9d243017c2611446d5e55c5fa"
+    },
+    {
+      "file": "character-2k.png",
+      "bytes": 1999144,
+      "sha256": "14590def716183f8cdb4a773f3e9d33b3de083002f2a2df9f3cc9de51ef66828"
+    }
+  ],
+  "notes": [
+    "character-2k.png is a direct Three.js KTX2Loader decoded color texture, upright 2048x2048 RGBA with genuine alpha; it is not a screenshot.",
+    "Actual reference applies Phong normal-map lighting to the color texture; decoded image excludes those dynamic lights.",
+    "Font files are the publicly served proprietary TWK Lausanne and Neo Sans Pro fonts; this manifest does not establish a reuse license."
+  ]
+}
