@@ -1,0 +1,56 @@
+{
+  "reference": "https://amaterasu.ai/aleph",
+  "extraction": "Exact Aleph KTX2 textures decoded with Three.js KTX2Loader to RGBA PNG; data channels retained without color conversion.",
+  "assets": [
+    {
+      "file": "character.ktx2",
+      "url": "https://amaterasu.ai/webgl/aleph/etc1s/character.ktx2",
+      "sha256": "4daab6a76b2a3f8676452c2694286597e2b9b29b56abf1358478b76fb82b671a",
+      "bytes": 422685,
+      "decodedFile": "character.png",
+      "decodedSha256": "580c405a7011fb66448dc501e03d4be77d33c407c7147a9f3e6f466b5a4f224b",
+      "decodedBytes": 1732441
+    },
+    {
+      "file": "character_blur.ktx2",
+      "url": "https://amaterasu.ai/webgl/aleph/etc1s/character_blur.ktx2",
+      "sha256": "ab871bf8db7ffd412bbaa53b978a0832343d114fc9b69730a37420a9bba4151a",
+      "bytes": 81498,
+      "decodedFile": "character_blur.png",
+      "decodedSha256": "150d0d6a5d4032189803e58400d7fac094de83e2e8b494c2886dc9e1815f2ad9",
+      "decodedBytes": 216752
+    },
+    {
+      "file": "character_depth.ktx2",
+      "url": "https://amaterasu.ai/webgl/aleph/etc1s/character_depth.ktx2",
+      "sha256": "cec790245858cf1e8e2781bd2ad1bb79e777c0750b6fff2f54bc2ca7c6abb847",
+      "bytes": 169531,
+      "decodedFile": "character_depth.png",
+      "decodedSha256": "2182876e0585a6bfdaf6ad7c434d56b56fa7b6bf83ad022db0d389e5eaebc2fe",
+      "decodedBytes": 324825
+    },
+    {
+      "file": "character_normal.ktx2",
+      "url": "https://amaterasu.ai/webgl/aleph/etc1s/character_normal.ktx2",
+      "sha256": "5ac8062c56e276519654573865870125c847aa1ac1291680b7893843aedbb721",
+      "bytes": 171838,
+      "decodedFile": "character_normal.png",
+      "decodedSha256": "bac7ae6dc7ea48671e2b6a500355611dc160fe2bb307e11c967a9a135ff984f8",
+      "decodedBytes": 509041
+    },
+    {
+      "file": "character_scan.ktx2",
+      "url": "https://amaterasu.ai/webgl/aleph/etc1s/character_scan.ktx2",
+      "sha256": "928c46f8c28d9d6ad229cc843669b7d73b335a3cbac38973dbbdb0000def5ae2",
+      "bytes": 122503,
+      "decodedFile": "character_scan.png",
+      "decodedSha256": "5e85387a599dc3b44f531e3848fdaf25526998d1d403da8c15b77dfb29aba326",
+      "decodedBytes": 360215
+    }
+  ],
+  "notes": [
+    "Source asset provenance is retained; no redistribution license is asserted.",
+    "This portrait is decorative and does not depict Kanishk.",
+    "Renderer independently reconstructs depth parallax, normal lighting, curl/spiral particles and scan bands from retained source parameters."
+  ]
+}

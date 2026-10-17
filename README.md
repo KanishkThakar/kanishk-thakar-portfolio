@@ -53,3 +53,9 @@ The journey profile now uses the reference card dimensions, receding pill stack,
 Chart.js v4.5.1 was sourced from the official GitHub repository at commit 9c5cf9fac7ec04a71b516e2aff3f7d76876be369; the vendored runtime and MIT notice are in assets/vendor. Demos are authored for Kanishk and third-party library/model credits remain accessible.
 
 Live Rumik is unresolved: local runtimes were stopped during inspection; the documented public API host did not resolve; the required Rumik credential was absent. No local voice server was exposed publicly and no authenticated production route was bypassed. A real deployment requires a credential, an authenticated server-side session bridge, strict request/concurrency/rate budgets, and verified model licensing. Browser preview responses are authored, not LLM-generated.
+
+## Focused scroll update — 17 October 2026
+
+Chaos to clarity now uses the actual Aleph portrait with decoded depth, normal, blur and highlight maps. A dedicated WebGL renderer provides depth parallax, normal-based lighting, a 65,536-point curl-to-spiral field (16,384 on initial mobile load), and a curved dot scan. Scroll phases use section-entry progress rather than incorrectly starting at the pin. The broad sine-wave overlay is removed in this scene. A static portrait remains available if WebGL or textures fail. Other journey canvas scenes remain approximations. See assets/aleph/provenance.json.
+
+The homepage frontier triangle follows the source cubic path with 450° rotation, scale and blur interpolation. It reverses with scrolling, then docks into the existing interactive cards. Reduced motion and mobile preserve usable static cards.
