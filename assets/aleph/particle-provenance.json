@@ -1,0 +1,13 @@
+{
+  "head": {
+    "url": "https://amaterasu.ai/webgl/aleph/head-particles.json",
+    "sha256": "5f8c9e936c6ec69db11ce1bf0bfd65f54ab53b68faecf0b0d0fa8ff0c2e28fd4",
+    "points": 25713
+  },
+  "outline": {
+    "source": "Amaterasu public T913OGlq.js bundle const kn",
+    "sha256": "92435d3ad5e547668d423657a1109811339fe141db97bc9c9abcb21c7fb2682d",
+    "points": 343
+  },
+  "note": "Decorative reference geometry; does not depict or identify Kanishk. Original source ownership retained."
+}

@@ -86,7 +86,7 @@
       });
       const loop = get(name, 'loop');
       const intro = get(name === 'archetypes-loop' ? 'archetypes-intro' : 'ambient-intro', 'intro');
-      transition = {loop, intro, elapsed: 0, epoch};
+      transition = {loop, intro, elapsed: 0, epoch, introLevel: .5};
       start(loop, 0, true);
       start(intro, .5, true).then(ok => {
         if (!ok && transition?.intro === intro && allowed()) target(loop, .5, .65);
@@ -115,7 +115,7 @@
         }
         if (context?.state !== 'running') resume = Promise.resolve(context?.resume());
       } catch (_) { /* Media elements provide fallback when Web Audio is unavailable. */ }
-      ambient = ''; startAmbient(chapter === 3 ? 'archetypes-loop' : 'ambient-loop'); treatment(); emit();
+      ambient = ''; startAmbient((chapter === 3 || chapter === 4) ? 'archetypes-loop' : 'ambient-loop'); treatment(); emit();
       try { await resume; } catch (_) { error = 'Tap to enable sound'; emit(); }
       return session === epoch && allowed();
     }
@@ -130,7 +130,7 @@
       if (index === chapter || destroyed) return;
       chapter = index; stopVoice();
       tracks.forEach(track => { if (track.role === 'effect') stop(track); });
-      startAmbient(chapter === 3 ? 'archetypes-loop' : 'ambient-loop'); treatment(); emit();
+      startAmbient((chapter === 3 || chapter === 4) ? 'archetypes-loop' : 'ambient-loop'); treatment(); emit();
     }
     async function playVoice(kind, index) {
       stopVoice(); if (!allowed()) return false;
@@ -169,7 +169,11 @@
       if (transition && transition.epoch === epoch) {
         transition.elapsed += dt;
         if (transition.elapsed >= 5) {
-          target(transition.intro, 0, .65); target(transition.loop, .5, .65); transition = null;
+          // The reference holds the introduction for five seconds, then blends for five.
+          const blend = clamp((transition.elapsed - 5) / 5);
+          target(transition.intro, .5 * (1 - blend), .08);
+          target(transition.loop, .5 * blend, .08);
+          if (blend === 1) { stop(transition.intro); transition = null; }
         }
       }
       tracks.forEach(track => {

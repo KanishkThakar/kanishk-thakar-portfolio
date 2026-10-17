@@ -62,7 +62,7 @@ test('old question completion cannot stop a newer question; progress follows cur
   x.track('question-02').onended(); assert.equal(x.ended.length, 1); assert.equal(x.ended[0].index, 1);
 });
 test('intro hands off to loop; voice ducks and releases loop smoothly', async () => {
-  const x = setup(false); await x.audio.enable(1); await flush(); x.tick(10);
+  const x = setup(false); await x.audio.enable(1); await flush(); x.tick(11);
   const loop = x.track('ambient-loop'); assert.ok(loop.volume > .45); assert.equal(x.track('ambient-intro').paused, true);
   await x.audio.playQuestion(0); x.tick(3); assert.ok(loop.volume < .14);
   x.audio.stopVoice(); const before = loop.volume; x.audio.tick(1 / 60); assert.ok(loop.volume > before && loop.volume < .2);
@@ -97,4 +97,23 @@ test('failed ambient playback allows an explicit gesture retry', async () => {
   await x.audio.enable(0); assert.equal(x.track('ambient-intro').calls.length, 2);
   x.track('ambient-intro').calls[1].resolve(); await flush();
   assert.equal(x.audio.getState().error, null);
+});
+
+test('digital twin music continues through connections without restarting its intro', async () => {
+  const x = setup(false); await x.audio.enable(3); await flush(); x.tick(6);
+  const intro = x.track('archetypes-intro'), before = intro.currentTime = 6;
+  x.audio.setChapter(4);
+  assert.equal(x.audio.getState().ambient, 'archetypes-loop');
+  assert.equal(intro.currentTime, before); assert.equal(intro.paused, false);
+  assert.equal(x.track('ambient-intro'), undefined);
+  x.tick(5); assert.ok(x.track('archetypes-loop').volume > .45);
+  x.audio.setChapter(5); assert.equal(x.audio.getState().ambient, 'ambient-loop');
+});
+test('intro crossfade spans the full five-second handoff', async () => {
+  const x = setup(false); await x.audio.enable(0); await flush(); x.tick(5);
+  assert.ok(x.track('ambient-intro').volume > .45);
+  assert.ok(x.track('ambient-loop').volume < .01);
+  x.tick(2.5); assert.ok(x.track('ambient-intro').volume > .20);
+  assert.ok(x.track('ambient-loop').volume > .20 && x.track('ambient-loop').volume < .30);
+  x.tick(3); assert.equal(x.track('ambient-intro').paused, true);
 });
