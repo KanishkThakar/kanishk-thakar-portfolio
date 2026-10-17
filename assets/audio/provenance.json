@@ -1,0 +1,162 @@
+{
+  "reference_site": "https://amaterasu.ai/",
+  "reference_journey": "https://amaterasu.ai/aleph",
+  "retrieval_date": "2026-10-17",
+  "method": "Direct downloads of publicly served original MP3 files; bytes retained without editing.",
+  "voice": "Original six question recordings from the public ALEPH payload. No voice cloning, synthesis, or speaker identity inference.",
+  "rights": "No reuse license was found in the public asset metadata. Public availability and this manifest imply no license grant.",
+  "files": [
+    {
+      "file": "question-01.mp3",
+      "duration": "3.617063",
+      "bytes": 94580,
+      "tags": {},
+      "sha256": "82ea70c5c39f74d84c9c89d702c8bcc3dbcd190ff2eaa69a41bff5615129cd1a",
+      "url": "https://a.storyblok.com/f/299979/x/46e2f0a9bd/question-01.mp3"
+    },
+    {
+      "file": "question-03.mp3",
+      "duration": "6.334792",
+      "bytes": 159668,
+      "tags": {},
+      "sha256": "96227d347521e04bf7f57baefde2a2a0c21ffaa995864104cde0677e927a1577",
+      "url": "https://a.storyblok.com/f/299979/x/cf1b1f905e/question-03.mp3"
+    },
+    {
+      "file": "question-02.mp3",
+      "duration": "4.386708",
+      "bytes": 113012,
+      "tags": {},
+      "sha256": "dbbe6dfc8c125e1d012fe4829dceb9eb16d1b4a5e1bf6fe6a4ae083b70a6d1ee",
+      "url": "https://a.storyblok.com/f/299979/x/117c8424d4/question-02.mp3"
+    },
+    {
+      "file": "question-06.mp3",
+      "duration": "4.966854",
+      "bytes": 126836,
+      "tags": {},
+      "sha256": "783275957943792f7f47ba0944276b3815d179e3ace05acaa92cf08fc5c1e77a",
+      "url": "https://a.storyblok.com/f/299979/x/836c3f0991/question-06.mp3"
+    },
+    {
+      "file": "treatment.mp3",
+      "duration": "4.879958",
+      "bytes": 125633,
+      "tags": {},
+      "sha256": "400830390c2d3b327acfeb5139434d56e67812dc236cfab531c3d411c8d8493b",
+      "url": "https://amaterasu.ai/audio/treatment.mp3"
+    },
+    {
+      "file": "archetypes-loop.mp3",
+      "duration": "15.000000",
+      "bytes": 370802,
+      "tags": {},
+      "sha256": "77ea3a015f040bb1ba821fc587ecc5f676b655ad4942bb185cc44994f33454d1",
+      "url": "https://amaterasu.ai/audio/archetypes-loop.mp3"
+    },
+    {
+      "file": "question-05.mp3",
+      "duration": "5.402229",
+      "bytes": 137780,
+      "tags": {},
+      "sha256": "23cb2d21f3a0fde1727fde5a3db6948b7cc2bce42b0bca93a784d5d86ff51521",
+      "url": "https://a.storyblok.com/f/299979/x/9ddd626060/question-05.mp3"
+    },
+    {
+      "file": "question-04.mp3",
+      "duration": "3.433500",
+      "bytes": 90548,
+      "tags": {},
+      "sha256": "83e2c4d882d186ffce5b97112e544e7542c8d9b4ec1159e9206418fc13828a93",
+      "url": "https://a.storyblok.com/f/299979/x/2cfabd7781/question-04.mp3"
+    },
+    {
+      "file": "archetypes-intro.mp3",
+      "duration": "10.000000",
+      "bytes": 250989,
+      "tags": {},
+      "sha256": "723a6ecb3c03876f4357ba5ff9d1ae1a5c1dcedd6d6432fa63f7805e8630072a",
+      "url": "https://amaterasu.ai/audio/archetypes-intro.mp3"
+    },
+    {
+      "file": "menu.mp3",
+      "duration": "0.624854",
+      "bytes": 23156,
+      "tags": {},
+      "sha256": "753ef158da8fe230073b22cb1682a243071345a637e6543c8d77fd8358446669",
+      "url": "https://amaterasu.ai/audio/menu.mp3"
+    },
+    {
+      "file": "ambient-intro.mp3",
+      "duration": "10.000000",
+      "bytes": 251336,
+      "tags": {},
+      "sha256": "e72e3d65113f75c574d34fe48f6192f082a309de035d30ba2b3ce5c28c463741",
+      "url": "https://amaterasu.ai/audio/ambient-intro.mp3"
+    },
+    {
+      "file": "woosh-2.mp3",
+      "duration": "4.036188",
+      "bytes": 105343,
+      "tags": {},
+      "sha256": "6c9849178b4752ae9053bab6568d89d7e549029af520884f2edafa61129af12f",
+      "url": "https://amaterasu.ai/audio/woosh-2.mp3"
+    },
+    {
+      "file": "woosh-3.mp3",
+      "duration": "3.177167",
+      "bytes": 84212,
+      "tags": {},
+      "sha256": "9240843c9b2f181f45dff5e5bd2f5ee492af7c2c17815018ae6dd4469ea5338b",
+      "url": "https://amaterasu.ai/audio/woosh-3.mp3"
+    },
+    {
+      "file": "woosh-1.mp3",
+      "duration": "2.168833",
+      "bytes": 60545,
+      "tags": {},
+      "sha256": "5e7c23e67db206231a5ad119189caa29d61c3f039fa404289d656440e51397b6",
+      "url": "https://amaterasu.ai/audio/woosh-1.mp3"
+    },
+    {
+      "file": "ambient-loop.mp3",
+      "duration": "25.000000",
+      "bytes": 611341,
+      "tags": {},
+      "sha256": "167174ae3ec6524e82209ee0bbd3ec79b5fd2b5d0467d85679a16ecbfbf60491",
+      "url": "https://amaterasu.ai/audio/ambient-loop.mp3"
+    }
+  ],
+  "questions": [
+    {
+      "file": "question-01.mp3",
+      "text": "Have you ever felt a deep sense of connection to a place?",
+      "url": "https://a.storyblok.com/f/299979/x/46e2f0a9bd/question-01.mp3"
+    },
+    {
+      "file": "question-02.mp3",
+      "text": "How do you balance your personal ambitions with maintaining relationships?",
+      "url": "https://a.storyblok.com/f/299979/x/117c8424d4/question-02.mp3"
+    },
+    {
+      "file": "question-03.mp3",
+      "text": "What helps you come to terms with the realization that some aspects of yourself may never change?",
+      "url": "https://a.storyblok.com/f/299979/x/cf1b1f905e/question-03.mp3"
+    },
+    {
+      "file": "question-04.mp3",
+      "text": "In what ways do you cope with regrets about the past?",
+      "url": "https://a.storyblok.com/f/299979/x/2cfabd7781/question-04.mp3"
+    },
+    {
+      "file": "question-05.mp3",
+      "text": "Can you recall a moment of peace during chaos? What contributed to that sense of calm?",
+      "url": "https://a.storyblok.com/f/299979/x/9ddd626060/question-05.mp3"
+    },
+    {
+      "file": "question-06.mp3",
+      "text": "How do you balance your inner desires with the pressures you face from the outside world?",
+      "url": "https://a.storyblok.com/f/299979/x/836c3f0991/question-06.mp3"
+    }
+  ]
+}

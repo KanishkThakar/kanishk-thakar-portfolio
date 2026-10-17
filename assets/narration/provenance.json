@@ -1,0 +1,56 @@
+{
+  "provider": "ElevenLabs",
+  "voice": "Janet (Rachel legacy voice ID alias)",
+  "requested_voice_id": "21m00Tcm4TlvDq8ikWAM",
+  "model": "eleven_multilingual_v2",
+  "date": "2026-10-17",
+  "style": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0.15,
+    "speed": 0.92
+  },
+  "voice_cloning": false,
+  "files": [
+    {
+      "file": "home.mp3",
+      "duration": 16.579048,
+      "sha256": "b2d522bcaaec2df00535a65a2ba8f524d02f2f2f27d2c8676cd1e729c29073b6"
+    },
+    {
+      "file": "contact.mp3",
+      "duration": 10.820499,
+      "sha256": "2009eacee61c776fe89653cb9b291ae3cf7cc5f63cfa67210b6773195eaa0b0f"
+    },
+    {
+      "file": "learning.mp3",
+      "duration": 12.167256,
+      "sha256": "bb4478ba7aa228f27d3d9a0a11e5aa93470b4690d74ec75f6f2952d41aac9ba0"
+    },
+    {
+      "file": "experiments.mp3",
+      "duration": 12.306576,
+      "sha256": "4b7d26949a075241e58101811d87651f5bed076e990208462735f4362f5a988d"
+    },
+    {
+      "file": "about.mp3",
+      "duration": 12.863855,
+      "sha256": "c9e842383ca32a94d49e96dc3d8e64c3bdc1d2602fc8ae9687bc4ee83ba59383"
+    },
+    {
+      "file": "perspectives.mp3",
+      "duration": 10.959819,
+      "sha256": "8c4c9af70f6c7c8f4dd4bb647351bc5df3d705b3d632983e1ad038078d276e41"
+    },
+    {
+      "file": "vision.mp3",
+      "duration": 14.117732,
+      "sha256": "04b4e5cbbfd005d41c219d1db7cccf1fd1366f29403ae654b0fbaa3b20552fd0"
+    },
+    {
+      "file": "skills.mp3",
+      "duration": 13.188934,
+      "sha256": "a8656c8fede8742f2a8e3961fd4f8f2d8ea4d4697e19f791ebd06174c6dbc643"
+    }
+  ]
+}
