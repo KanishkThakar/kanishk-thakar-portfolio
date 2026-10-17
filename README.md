@@ -59,3 +59,11 @@ Live Rumik is unresolved: local runtimes were stopped during inspection; the doc
 Chaos to clarity now uses the actual Aleph portrait with decoded depth, normal, blur and highlight maps. A dedicated WebGL renderer provides depth parallax, normal-based lighting, a 65,536-point curl-to-spiral field (16,384 on initial mobile load), and a curved dot scan. Scroll phases use section-entry progress rather than incorrectly starting at the pin. The broad sine-wave overlay is removed in this scene. A static portrait remains available if WebGL or textures fail. Other journey canvas scenes remain approximations. See assets/aleph/provenance.json.
 
 The homepage frontier triangle follows the source cubic path with 450° rotation, scale and blur interpolation. It reverses with scrolling, then docks into the existing interactive cards. Reduced motion and mobile preserve usable static cards.
+
+## Journey-wide timing pass — 18 October 2026
+
+All journey scenes now share a single native scroll position and animation clock. Desktop wheel input uses time-based damping; touch and keyboard retain native scrolling. Chapter navigation cancels pending narration and waits for the destination to settle. Background palettes and scene visibility blend across boundaries, portrait progress no longer has a second lagging interpolation, and scroll-controlled text fades reverse deterministically. Digital-twin depth is bounded in front of the camera; circuit paths no longer jump at a modulo discontinuity. Pause and reduced-motion preferences suppress idle movement.
+
+`journey-audio.js` provides a cancellable audio transport with one active narrator, ambient crossfades, music ducking, explicit background resume, and stale-playback protection. The six question recordings follow their displayed text and elapsed audio duration; unrelated homepage narration is not automatically played in journey chapters. Desktop/mobile browser checks supplement eight fake-audio regression tests covering late promises, chapter exits, replay, mute, suspend, fades and retry.
+
+Run audio regressions with `node --test tests/journey-audio.test.cjs`.

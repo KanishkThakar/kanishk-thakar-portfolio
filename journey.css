@@ -26,3 +26,11 @@ h1,h2,h3{font-weight:300}
 @media(max-width:700px){.chaos .caption{left:8%;bottom:11%;width:84%}.chaos .caption h2{font-size:10vw;margin:16px 0}.chaos .caption>p:last-child{font-size:15px;max-width:76vw}.chaos .face-label{top:22%;right:8%;max-width:75px;line-height:1.6}.chaos .chaos-index{left:auto;right:8%;bottom:8%}.portrait img{height:58vh;width:58vh;left:50%;top:9%}}
 
 .chaos-active .chapters a span{display:none}.chaos .caption h2{font-size:4.2vw}@media(max-width:700px){.chaos .caption h2{font-size:10vw}}
+
+/* One native scroll position drives all timelines, without nested CSS smoothing. */
+html{scroll-behavior:auto}.sticky{will-change:opacity}.question-orbit{transition:none}.question-orbit #question span{opacity:1}.twin .sticky{perspective:1400px}.archetypes{perspective:1400px}.archetypes span{width:90%;text-align:center}.motion-paused .voice-window svg{animation-play-state:paused}.chapter-number{transition:color .35s}.chapters a span{pointer-events:none}
+#entry-gate{position:fixed;inset:0;z-index:100;background:radial-gradient(ellipse at 70% 80%,#4da1b8,#153566 45%,#040a2e);color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .75s,filter .75s}#enter-sound{width:200px;height:200px;border:1px solid #ffffff80;border-radius:50%;font-size:13px;letter-spacing:.12em}#enter-sound span{display:block;margin-top:12px;font-size:10px;opacity:.6}#enter-silent{margin-top:35px;font-size:12px;opacity:.75}
+@media(max-width:700px){.sticky{height:100svh}.twin .sticky,.archetypes{perspective:1400px}.twin .fly-text{top:28%}.twin .fly-text h2{font-size:11vw}.question-controls{padding:0 22px}.profile .question-card{margin-top:15vw}.profile .question-stage{height:73vw}.chapter{scroll-margin-top:0}}
+@media(min-width:701px){.profile .question-card{margin-top:3vw}.profile .question-stage{height:18vw}.profile .section-intro{max-width:52vw}.profile .section-intro h2{margin:18px 0}.profile{padding:13vh 0 9vh}}
+
+.voice-window svg{animation-play-state:paused}.voice-active .question-orbit .voice-window svg{animation-play-state:running}.motion-paused .voice-window svg{animation-play-state:paused!important}

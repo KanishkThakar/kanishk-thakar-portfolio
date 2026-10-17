@@ -92,14 +92,14 @@ void main(){
   ready=true;canvas.dataset.renderer='webgl';canvas.dataset.particles=String(count);
  }
  function fail(e){ready=false;canvas.dataset.renderer='fallback';canvas.style.opacity='0';console.warn('Portrait GPU fallback:',e.message);}
- function render({progress:target,time,mouse,paused,reduced}){
+ function render({progress:target,time,mouse,paused,reduced,opacity=1}){
   if(!api.ready)return false;
   if(width!==innerWidth||height!==innerHeight){width=innerWidth;height=innerHeight;dpr=Math.min(devicePixelRatio||1,width<700?1.25:1.5);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);gl.viewport(0,0,canvas.width,canvas.height);}
   const now=performance.now(),dt=Math.min((now-previous)/1000,.05);previous=now;
-  const damping=1-Math.exp(-dt*12);progress+= (target-progress)*(reduced?1:damping);
+  const damping=1-Math.exp(-dt*12);progress=target;
   if(Math.abs(target-progress)<.0001)progress=target;
   pointer[0]+=(mouse.x-pointer[0])*.06;pointer[1]+=(mouse.y-pointer[1])*.06;
-  canvas.style.opacity='1';canvas.dataset.phase=progress.toFixed(3);
+  canvas.style.opacity=String(opacity);canvas.dataset.phase=progress.toFixed(3);
   gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);gl.disable(gl.DEPTH_TEST);gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);
   for(const p of [plane,particles]){gl.useProgram(p.p);uniform(p,'uResolution',width,height);uniform(p,'uPointer',paused?0:pointer[0],paused?0:pointer[1]);uniform(p,'uTime',time);uniform(p,'uProgress',reduced?.24:progress);uniform(p,'uDpr',dpr);uniform(p,'uMobile',width<700?1:0);}
   gl.useProgram(plane.p);['uColor','uDepth','uNormal','uBlur','uScan'].forEach((n,i)=>{gl.activeTexture(gl.TEXTURE0+i);gl.bindTexture(gl.TEXTURE_2D,textures[i]);gl.uniform1i(loc(plane,n),i);});
