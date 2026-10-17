@@ -25,13 +25,13 @@ Static deployment on Vercel; no build step or authentication required.
 
 ## Live experiments and audio
 
-- Budget Studio: add/remove categorized expenses, change a budget, reset samples, and retain changes in local browser storage. Sample amounts are illustrative.
-- Focus Room: 25-minute focus, 5-minute break, and 1-minute quick demo with pause/resume/reset and elapsed wall-clock timing.
-- Orbit Lab: interactive particles, density/speed controls, three palettes, pause/resume, and PNG export.
+- Soul Yatri Journey Studio: filter and compare fictional discovery approaches, plan sessions, retain a local plan, and export ICS calendar or notes. Grounded in the actual Soul Yatri codebase; no live bookings or clinical service.
+- Intelligence Observatory: interactive architecture graph, Chart.js charts, crossfilters, sortable records and CSV export over 480 explicitly illustrative aggregate records. Repository facts are separate from example telemetry.
+- Soul Yatri Voice: a 30-second browser-guided voice/type preview with consent before microphone use, prerecorded cloned replies, transcript, stop control, and an authentic prerecorded Rumik sample. It is not hosted Rumik inference. Speech recognition may use the visitor browser provider.
 - Enter with sound starts reference ambient music and synthetic English narration. Separate Sound/Voice controls can disable either; Enter silently enables neither. Background tabs pause both. Narration ducks the music while speaking.
-- Home narration: ElevenLabs Janet stock voice (Rachel legacy ID alias), eleven_multilingual_v2, rendered to MP3, scripts in `assets/narration/scripts.json`. Journey voice: the six original reference recordings, not a voice clone and not regenerated speech. Music and transition sounds: original reference files with exact URL/hash provenance in `assets/audio/provenance.json`.
+- Home narration: ElevenLabs Soul Yatri — Journey Narrator instant clone (user-confirmed narrator permission), eleven_multilingual_v2, rendered to MP3, scripts in `assets/narration/scripts.json`. Journey question voice: the six original reference recordings. Custom chapters and guided replies: synthetic cloned narration; exact perceptual identity is not asserted. Music and transition sounds: original reference files with exact URL/hash provenance in `assets/audio/provenance.json`.
 
-The capability section describes specific technology uses rather than proficiency ratings. The three live experiments are working portfolio demonstrations, not client projects.
+The capability section describes specific technology uses rather than proficiency ratings. The product interfaces are purpose-built portfolio showcases. They do not imply production adoption, measured performance or ownership of third-party model technology.
 
 ## Dedicated journey
 
@@ -39,8 +39,17 @@ The capability section describes specific technology uses rather than proficienc
 
 Question audio has per-word highlighting, replay, next and automatic progression. Intro/loop tracks crossfade; the voice changes volume and lowpass filtering with scroll. Muting, pausing motion, reduced-motion preferences and background-tab audio pause are supported. A direct visit asks for an entry gesture; browser autoplay restrictions can require clicking Enable sound.
 
-Budget Studio, Focus Room and Orbit Lab can also be used inside the homepage through accessible tabs and a live iframe, or opened as standalone apps.
+The new showcases are embedded using accessible tabs or open as full-page apps. The previous budget/timer/particle demos have been retired.
 
 ## Verification notes
 
 The reference's open Chrome route reported missing scene objects during inspection; visual parity with its GPU renderer is not asserted. REA 6.5.0 parsed five saved reference bundles successfully (partial semantic graph due to node limits), with runtime controls separately checked in the browser. Media provenance distinguishes original reference files from the generated ElevenLabs portfolio narration.
+
+
+## 2026-10-17 fidelity and product update
+
+The journey profile now uses the reference card dimensions, receding pill stack, pointer parallax, duration-based text reveal and natural section flow. Additional depth-flight text, archetype transitions, circular progress, rolling circuit counter and radial wipe follow retained source timeline evidence. The counter is an artistic scene and is not a product metric. Canvas scenes remain independent approximations.
+
+Chart.js v4.5.1 was sourced from the official GitHub repository at commit 9c5cf9fac7ec04a71b516e2aff3f7d76876be369; the vendored runtime and MIT notice are in assets/vendor. Demos are authored for Kanishk and third-party library/model credits remain accessible.
+
+Live Rumik is unresolved: local runtimes were stopped during inspection; the documented public API host did not resolve; the required Rumik credential was absent. No local voice server was exposed publicly and no authenticated production route was bypassed. A real deployment requires a credential, an authenticated server-side session bridge, strict request/concurrency/rate budgets, and verified model licensing. Browser preview responses are authored, not LLM-generated.

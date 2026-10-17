@@ -1,0 +1,21 @@
+{
+  "kind": "prerecorded local synthesis validation sample",
+  "source_file": "rumik-8bit-run/warm.wav",
+  "verification_record": "rumik-8bit-run/metrics.json and run.py",
+  "input": "हाँ, बिल्कुल! बताओ, आज तुम्हारा दिन कैसा रहा?",
+  "spoken_output": "हाँ, बिल्कुल! बताओ, आज तुम्हारा दिन कैसा रहा?",
+  "duration_seconds": 5.92,
+  "sha256": "fac9ce920be6a345f55836281414b257d578de8a734aac03b75bc33a9d757636",
+  "speech_model": "rumik-ai/rumik-oss-1-mlx-8bit",
+  "speech_model_revision": "864a618785d0641ee947762238c2ca5ee3f51786",
+  "role": "Direct Rumik text-to-speech benchmark output, voice Ira, Hindi accent, happy instruction. Not a reply generated from visitor input.",
+  "attribution": {
+    "Rumik AI": "https://huggingface.co/rumik-ai/rumik-oss-1",
+    "Kyutai Mimi": "https://huggingface.co/kyutai/mimi",
+    "Bodhan AI": "https://huggingface.co/bodhan-ai/indic-transcribe-flex",
+    "Google DeepMind": "https://huggingface.co/google/gemma-4-26B-A4B-it"
+  },
+  "model_weight_license": "Cohere Labs CC-BY-NC 4.0 with acceptable-use addendum; model weights are not included.",
+  "model_license_url": "https://cohere.com/cohere-labs-cc-by-nc-license",
+  "preview": "Browser speech services plus authored deterministic responses; no hosted Rumik API connected."
+}

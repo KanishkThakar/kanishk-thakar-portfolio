@@ -1,56 +1,121 @@
 {
   "provider": "ElevenLabs",
-  "voice": "Janet (Rachel legacy voice ID alias)",
-  "requested_voice_id": "21m00Tcm4TlvDq8ikWAM",
+  "voice": "Soul Yatri — Journey Narrator",
+  "voice_id": "g5DhU2Gaas8lYbzU8Pnf",
   "model": "eleven_multilingual_v2",
   "date": "2026-10-17",
-  "style": {
-    "stability": 0.65,
-    "similarity_boost": 0.8,
+  "voice_cloning": true,
+  "consent": "User confirmed narrator permission and accepted ElevenLabs declaration before saving.",
+  "reference_sample_sha256": "dda6406b244cbe629113ca0a5336ddf3501211e8a292d56b6c81f32395490a3c",
+  "reference": "Six original journey question recordings; sources in assets/audio/provenance.json",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.95,
     "style": 0.15,
-    "speed": 0.92
+    "speed": 0.95,
+    "use_speaker_boost": true
   },
-  "voice_cloning": false,
+  "limitations": "Synthetic reproduction from a 28-second sample; perceptual identity is not guaranteed.",
   "files": [
     {
-      "file": "home.mp3",
-      "duration": 16.579048,
-      "sha256": "b2d522bcaaec2df00535a65a2ba8f524d02f2f2f27d2c8676cd1e729c29073b6"
+      "file": "assets/narration/about.mp3",
+      "duration": 10.913379,
+      "sha256": "1a96c0ccf2bc02537d23d7ee3676d48f139cea19b5adb79c72631b8bb7b0281c"
     },
     {
-      "file": "contact.mp3",
-      "duration": 10.820499,
-      "sha256": "2009eacee61c776fe89653cb9b291ae3cf7cc5f63cfa67210b6773195eaa0b0f"
+      "file": "assets/narration/contact.mp3",
+      "duration": 8.870023,
+      "sha256": "de8b7dbdbba402b7f81ad9509f585a46a880d965fbe8c961372a2bc047ba4fe2"
     },
     {
-      "file": "learning.mp3",
-      "duration": 12.167256,
-      "sha256": "bb4478ba7aa228f27d3d9a0a11e5aa93470b4690d74ec75f6f2952d41aac9ba0"
+      "file": "assets/narration/experiments.mp3",
+      "duration": 15.046531,
+      "sha256": "c355ab26af69579fc5609b132ae6d45c67176d0ea80d6200defc2070b9b2ebf5"
     },
     {
-      "file": "experiments.mp3",
-      "duration": 12.306576,
-      "sha256": "4b7d26949a075241e58101811d87651f5bed076e990208462735f4362f5a988d"
+      "file": "assets/narration/home.mp3",
+      "duration": 12.120816,
+      "sha256": "380ae4faba4f5bcdbca70cfaef51fcf44188e49cf20637ddc7a0673ec0ef190d"
     },
     {
-      "file": "about.mp3",
-      "duration": 12.863855,
-      "sha256": "c9e842383ca32a94d49e96dc3d8e64c3bdc1d2602fc8ae9687bc4ee83ba59383"
+      "file": "assets/narration/learning.mp3",
+      "duration": 11.145578,
+      "sha256": "c78e608b5fa089e63bcd54f8507e13b8b86881f63710ecbcc6858a6bf5da40fa"
     },
     {
-      "file": "perspectives.mp3",
-      "duration": 10.959819,
-      "sha256": "8c4c9af70f6c7c8f4dd4bb647351bc5df3d705b3d632983e1ad038078d276e41"
+      "file": "assets/narration/perspectives.mp3",
+      "duration": 10.1239,
+      "sha256": "e9ea064854a91eb94dac3c244263018b5a9bb6285667092e673a5d836374120c"
     },
     {
-      "file": "vision.mp3",
-      "duration": 14.117732,
-      "sha256": "04b4e5cbbfd005d41c219d1db7cccf1fd1366f29403ae654b0fbaa3b20552fd0"
+      "file": "demos/voice-replies/reply-01.mp3",
+      "duration": 14.675011,
+      "sha256": "21ffaec309cdc034ccdfff4aa32707c12add9a8b063bb8f0d6d1580976125b46"
     },
     {
-      "file": "skills.mp3",
-      "duration": 13.188934,
-      "sha256": "a8656c8fede8742f2a8e3961fd4f8f2d8ea4d4697e19f791ebd06174c6dbc643"
+      "file": "demos/voice-replies/reply-02.mp3",
+      "duration": 16.114649,
+      "sha256": "312776210669c2207a55772ae32f0d2d700d5724319a26d8ec85a7d852ba9abd"
+    },
+    {
+      "file": "demos/voice-replies/reply-03.mp3",
+      "duration": 16.532608,
+      "sha256": "74166dc36f3fb08177253da93059ae4cf83304fc6015aa96d3c42578b3a719cf"
+    },
+    {
+      "file": "demos/voice-replies/reply-04.mp3",
+      "duration": 16.253968,
+      "sha256": "df5eea763daf214a2536d97f5b6664b4f75860dfd03f50aa914925e21408d2da"
+    },
+    {
+      "file": "demos/voice-replies/reply-05.mp3",
+      "duration": 18.854603,
+      "sha256": "f00a9b4342c7fbbaa95a75b8572e5a9e7e712c52e841193a6ad37660586a43ed"
+    },
+    {
+      "file": "demos/voice-replies/reply-06.mp3",
+      "duration": 17.275646,
+      "sha256": "3bd86ff25982a2893f8632719a24cd35ad42cd6f8e691dadb335b9d8f1a66635"
+    },
+    {
+      "file": "demos/voice-replies/reply-07.mp3",
+      "duration": 15.23229,
+      "sha256": "e3f8543c5da1d64589db93b24d5d6d59245df3cff1e3063825e98fdc81f417b7"
+    },
+    {
+      "file": "demos/voice-replies/reply-08.mp3",
+      "duration": 15.23229,
+      "sha256": "936f730e4b5ddf02746cb24024a6f073f0c4db190cca2446da9cadc06229726b"
+    },
+    {
+      "file": "demos/voice-replies/reply-09.mp3",
+      "duration": 8.777143,
+      "sha256": "b609dad2da5a14b56c1c20168246dd2ef1bdce3236b9d27cc78c958d43bf6c94"
+    },
+    {
+      "file": "demos/voice-replies/reply-10.mp3",
+      "duration": 7.291066,
+      "sha256": "0253fddc9ccce438510dba3d8d2c8f7d7c79bf890781f7f0ee00636c237498d2"
+    },
+    {
+      "file": "demos/voice-replies/reply-11.mp3",
+      "duration": 15.41805,
+      "sha256": "6fceb6e72c3620aed9afca4db0e1540a0c43cabdc0f78c933ad2fb26d60c3267"
+    },
+    {
+      "file": "demos/voice-replies/reply-12.mp3",
+      "duration": 14.953651,
+      "sha256": "46617a6f1d0b0dee4323747014c28ee94c463d7a65322433c10489376b5f02a3"
+    },
+    {
+      "file": "assets/narration/skills.mp3",
+      "duration": 11.470658,
+      "sha256": "5dbc28149624b76405d7af949bedb91fb71188abf2b9c4a77c3ac0f3a727d284"
+    },
+    {
+      "file": "assets/narration/vision.mp3",
+      "duration": 11.377778,
+      "sha256": "ab787173209a12b05ff02c82023e3e194885312bddbacccac52adc60e750f729"
     }
   ]
 }

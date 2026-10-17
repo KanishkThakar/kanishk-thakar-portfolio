@@ -1,0 +1,10 @@
+{
+  "Chart.js": {
+    "version": "4.5.1",
+    "source": "https://github.com/chartjs/Chart.js",
+    "commit": "9c5cf9fac7ec04a71b516e2aff3f7d76876be369",
+    "runtime": "https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js",
+    "sha256": "48444a82d4edcb5bec0f1965faacdde18d9c17db3063d042abada2f705c9f54a",
+    "license": "MIT; Chart-LICENSE.txt"
+  }
+}
