@@ -47,3 +47,4 @@ html{scroll-behavior:auto}.sticky{will-change:opacity}.question-orbit{transition
 @media(min-width:701px){.chaos .caption{left:2.8%;bottom:18%;width:26%}.chaos .caption h2{font-size:5.3vw}.chaos .caption>p:last-child{max-width:23vw}.chaos .caption .eyebrow{position:fixed;bottom:4%;left:2.8%;font-size:7px}.chaos .face-label,.chaos .side-marker{opacity:.25}}
 
 .treatment .curve-wipe{inset:auto;left:-25%;top:100%;width:150%;height:180%;border-radius:50% 50% 0 0;background:linear-gradient(175deg,#fff 25%,#e5f6fa 70%,#b7deec);will-change:transform}
+@media(min-width:701px){.chaos-active .chapters{left:auto;right:2.8%}}

@@ -3,7 +3,7 @@
   'use strict';
   const canvas=document.createElement('canvas');canvas.id='journey-particles';canvas.setAttribute('aria-hidden','true');
   Object.assign(canvas.style,{position:'fixed',inset:'0',width:'100%',height:'100%',pointerEvents:'none',zIndex:'-1',opacity:'0'});document.body.prepend(canvas);
-  const gl=canvas.getContext('webgl',{alpha:true,antialias:false,premultipliedAlpha:false,powerPreference:'high-performance'});
+  const gl=canvas.getContext('webgl',{alpha:true,antialias:false,premultipliedAlpha:true,powerPreference:'high-performance'});
   let ready=false,lost=false,width=0,height=0,dpr=1,sets={},programs={},pointer=[0,0];
   const api=window.journeyParticles={get ready(){return ready&&!lost;},render,hide(){canvas.style.opacity='0';}};
   if(!gl){canvas.remove();return;}
@@ -140,7 +140,7 @@ void main(){
     const offset=-1.5-54*ease(ramp(.05,1,cp));
     const delta=Math.abs(offset-oldOffset);oldOffset=offset;velocity+=(Math.min(.2,delta*.667)-velocity)*.1;if(paused||reduced)velocity=0;
     const vars={uResolution:[width,height],uPointer:paused||reduced?[0,0]:pointer,uDpr:[dpr],uTime:[clock],uMobile:[width<700?1:0],uReduced:[reduced?1:0]};
-    function draw(name,progress,opacity,cam,extra={}){if(opacity<=.001)return;const p=programs[name],b=sets[name];gl.useProgram(p.p);gl.blendFunc(gl.SRC_ALPHA,name==='head'?gl.ONE_MINUS_SRC_ALPHA:gl.ONE);for(const [k,v]of Object.entries({...vars,uProgress:[progress],uOpacity:[opacity],uCamera:[cam],...extra}))uniform(p,k,...v);gl.bindBuffer(gl.ARRAY_BUFFER,b.buffer);const sizes=[3,4,4],offsets=[0,12,28];p.attributes.forEach((a,i)=>{if(a>=0){gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,sizes[i],gl.FLOAT,false,44,offsets[i]);}});gl.drawArrays(gl.POINTS,0,b.count);p.attributes.forEach(a=>{if(a>=0)gl.disableVertexAttribArray(a);});}
+    function draw(name,progress,opacity,cam,extra={}){if(opacity<=.001)return;const p=programs[name],b=sets[name];gl.useProgram(p.p);gl.blendFuncSeparate(gl.SRC_ALPHA,name==='head'?gl.ONE_MINUS_SRC_ALPHA:gl.ONE,gl.ONE,gl.ONE_MINUS_SRC_ALPHA);for(const [k,v]of Object.entries({...vars,uProgress:[progress],uOpacity:[opacity],uCamera:[cam],...extra}))uniform(p,k,...v);gl.bindBuffer(gl.ARRAY_BUFFER,b.buffer);const sizes=[3,4,4],offsets=[0,12,28];p.attributes.forEach((a,i)=>{if(a>=0){gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,sizes[i],gl.FLOAT,false,44,offsets[i]);}});gl.drawArrays(gl.POINTS,0,b.count);p.attributes.forEach(a=>{if(a>=0)gl.disableVertexAttribArray(a);});}
     if(twinOpacity>0){draw('head',tp,twinOpacity,camera);draw('cloud',tp,twinOpacity,camera);draw('outline',tp,twinOpacity,camera);}
     if(quantumAlpha>0){const inTwin=circuitOpacity<.001&&treatmentOpacity<.001;const z=inTwin?-40+30*ease(ramp(.79,.87,tp)):-10;const cam=inTwin?camera:-10;const extras={uOffset:[offset],uVelocity:[velocity],uTreatment:[treatmentOpacity>0?tr:0],uQuantumZ:[z]};draw('grid',cp,quantumAlpha,cam,extras);draw('trails',cp,quantumAlpha,cam,extras);}
     canvas.dataset.phase=[tp,cp,tr].map(v=>v.toFixed(3)).join(',');return true;

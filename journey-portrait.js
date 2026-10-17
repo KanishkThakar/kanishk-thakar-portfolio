@@ -3,7 +3,7 @@
   'use strict';
   const canvas = document.createElement('canvas');
   canvas.id = 'chaos-world'; canvas.setAttribute('aria-hidden', 'true'); document.body.prepend(canvas);
-  const gl = canvas.getContext('webgl', { alpha: true, antialias: false, premultipliedAlpha: false, powerPreference: 'high-performance' });
+  const gl = canvas.getContext('webgl', { alpha: true, antialias: false, premultipliedAlpha: true, powerPreference: 'high-performance' });
   const clamp = n => Math.max(0, Math.min(1, n));
   const phase = (p,a,b) => {const t=clamp((p-a)/(b-a));return t*t*(3-2*t);};
   let ready=false, lost=false, width=0, height=0, dpr=1, pointer=[0,0], progress=0, previous=0;
@@ -130,11 +130,11 @@ void main(){
   if(Math.abs(target-progress)<.0001)progress=target;
   pointer[0]+=(mouse.x-pointer[0])*.06;pointer[1]+=(mouse.y-pointer[1])*.06;
   canvas.style.opacity=String(opacity);canvas.dataset.phase=progress.toFixed(3);
-  gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);gl.disable(gl.DEPTH_TEST);gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);
+  gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);gl.disable(gl.DEPTH_TEST);gl.enable(gl.BLEND);gl.blendFuncSeparate(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA,gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
   for(const p of [plane,particles]){gl.useProgram(p.p);uniform(p,'uResolution',width,height);uniform(p,'uPointer',paused?0:pointer[0],paused?0:pointer[1]);uniform(p,'uTime',time);uniform(p,'uProgress',reduced?.24:progress);uniform(p,'uDpr',dpr);uniform(p,'uMobile',width<700?1:0);}
   gl.useProgram(plane.p);['uColor','uDepth','uNormal','uBlur','uScan'].forEach((n,i)=>{gl.activeTexture(gl.TEXTURE0+i);gl.bindTexture(gl.TEXTURE_2D,textures[i]);gl.uniform1i(loc(plane,n),i);});
   gl.bindBuffer(gl.ARRAY_BUFFER,quadBuffer);const a=gl.getAttribLocation(plane.p,'aPosition');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);gl.drawArrays(gl.TRIANGLES,0,6);gl.disableVertexAttribArray(a);
-  if(!reduced&&progress>.295&&progress<.77){gl.useProgram(particles.p);gl.blendFunc(gl.SRC_ALPHA,gl.ONE);gl.bindBuffer(gl.ARRAY_BUFFER,pointBuffer);const b=gl.getAttribLocation(particles.p,'aSeed');gl.enableVertexAttribArray(b);gl.vertexAttribPointer(b,3,gl.FLOAT,false,0,0);gl.bindBuffer(gl.ARRAY_BUFFER,particleUvBuffer);const uv=gl.getAttribLocation(particles.p,'aParticleUv');gl.enableVertexAttribArray(uv);gl.vertexAttribPointer(uv,2,gl.FLOAT,false,0,0);gl.drawArrays(gl.POINTS,0,count);gl.disableVertexAttribArray(b);gl.disableVertexAttribArray(uv);}
+  if(!reduced&&progress>.295&&progress<.77){gl.useProgram(particles.p);gl.blendFuncSeparate(gl.SRC_ALPHA,gl.ONE,gl.ONE,gl.ONE_MINUS_SRC_ALPHA);gl.bindBuffer(gl.ARRAY_BUFFER,pointBuffer);const b=gl.getAttribLocation(particles.p,'aSeed');gl.enableVertexAttribArray(b);gl.vertexAttribPointer(b,3,gl.FLOAT,false,0,0);gl.bindBuffer(gl.ARRAY_BUFFER,particleUvBuffer);const uv=gl.getAttribLocation(particles.p,'aParticleUv');gl.enableVertexAttribArray(uv);gl.vertexAttribPointer(uv,2,gl.FLOAT,false,0,0);gl.drawArrays(gl.POINTS,0,count);gl.disableVertexAttribArray(b);gl.disableVertexAttribArray(uv);}
   return true;
  }
  init().catch(fail);
